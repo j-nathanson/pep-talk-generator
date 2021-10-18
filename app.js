@@ -66,7 +66,7 @@ const structureD = [
   "24/7.",
   "can I get an amen?",
   "and that's a fact.",
-  "so treat yourself",
+  "so treat yourself.",
   "you feel me?",
   "that's just science",
   "would I lie?",
@@ -89,19 +89,22 @@ let randomIndexB = 0;
 let randomIndexC = 0;
 let randomIndexD = 0;
 
+//initialize sentence string
+let sentence = "";
+
 // function
-const getRandomIndices = () => {
+const setRandomIndices = () => {
   randomIndexA = Math.floor(Math.random() * structureA.length);
   randomIndexB = Math.floor(Math.random() * structureB.length);
   randomIndexC = Math.floor(Math.random() * structureC.length);
   randomIndexD = Math.floor(Math.random() * structureD.length);
 };
 
-getRandomIndices();
+const sentenceGenerator = () => {
+  sentence = ` ${structureA[randomIndexA]} ${structureB[randomIndexB]} ${structureC[randomIndexC]} ${structureD[randomIndexD]}`;
+  return sentence;
+};
 
-console.log(
-  structureA[randomIndexA],
-  structureB[randomIndexB],
-  structureC[randomIndexC],
-  structureD[randomIndexD]
-);
+setRandomIndices();
+sentenceGenerator();
+console.log(sentence);
