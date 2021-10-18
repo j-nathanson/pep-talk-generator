@@ -92,19 +92,23 @@ let randomIndexD = 0;
 //initialize sentence string
 let sentence = "";
 
-// function
+// Selectors
+const targetParagraph = document.getElementById("generated-sentence");
+const button = document.querySelector("input");
+
+// Functions
 const setRandomIndices = () => {
   randomIndexA = Math.floor(Math.random() * structureA.length);
   randomIndexB = Math.floor(Math.random() * structureB.length);
   randomIndexC = Math.floor(Math.random() * structureC.length);
   randomIndexD = Math.floor(Math.random() * structureD.length);
+  sentenceGenerator();
 };
 
 const sentenceGenerator = () => {
   sentence = ` ${structureA[randomIndexA]} ${structureB[randomIndexB]} ${structureC[randomIndexC]} ${structureD[randomIndexD]}`;
-  return sentence;
+  targetParagraph.textContent = sentence;
 };
 
-setRandomIndices();
-sentenceGenerator();
-console.log(sentence);
+//Event Listener
+button.addEventListener("click", setRandomIndices);
