@@ -97,6 +97,8 @@ const targetParagraph = document.getElementById("generated-sentence");
 const button = document.querySelector("input");
 
 // Functions
+
+// get random indices for each of the 4 data arrays
 const setRandomIndices = () => {
   randomIndexA = Math.floor(Math.random() * structureA.length);
   randomIndexB = Math.floor(Math.random() * structureB.length);
@@ -105,8 +107,10 @@ const setRandomIndices = () => {
   sentenceGenerator();
 };
 
+// use interpolation to generate a string from the arrays. Then add the string to the DOM
 const sentenceGenerator = () => {
   sentence = ` ${structureA[randomIndexA]} ${structureB[randomIndexB]} ${structureC[randomIndexC]} ${structureD[randomIndexD]}`;
+  
   targetParagraph.textContent = sentence;
 };
 
