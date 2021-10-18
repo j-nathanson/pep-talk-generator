@@ -1,3 +1,4 @@
+// Data arrays
 const structureA = [
   "Champ,",
   "Fact:",
@@ -11,7 +12,7 @@ const structureA = [
   "Know this:",
   "News alert:",
   "Girl,",
-  "Ace",
+  "Ace,",
   "Excuse me but",
   "Experts agree",
   "In my opinion",
@@ -81,3 +82,26 @@ const structureD = [
   "according to CNN.",
   "so get used to it",
 ];
+
+// initialize random indices
+let randomIndexA = 0;
+let randomIndexB = 0;
+let randomIndexC = 0;
+let randomIndexD = 0;
+
+// function
+const getRandomIndices = () => {
+  randomIndexA = Math.floor(Math.random() * structureA.length);
+  randomIndexB = Math.floor(Math.random() * structureB.length);
+  randomIndexC = Math.floor(Math.random() * structureC.length);
+  randomIndexD = Math.floor(Math.random() * structureD.length);
+};
+
+getRandomIndices();
+
+console.log(
+  structureA[randomIndexA],
+  structureB[randomIndexB],
+  structureC[randomIndexC],
+  structureD[randomIndexD]
+);
