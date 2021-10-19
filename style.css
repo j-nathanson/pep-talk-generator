@@ -15,6 +15,69 @@ body {
 }
 
 .container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 10px 10px 40px 10px;
+}
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+p:nth-child(2) {
+  margin: 10px;
+  text-align: center;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  margin-top: 10px;
+  font-size: 1em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 32px;
+}
+
+.button:hover {
+  background-color: #38833b;
+}
+
+#generated-sentence {
+  height: 175px;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 600px) {
+  .container > * {
+    margin-top: 30px;
+  }
+  .button {
+    font-size: 2em;
+  }
+  #generated-sentence {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  h1 {
+    font-size: 4em;
+  }
+  p:nth-child(2) {
+    font-size: 2em;
+  }
+  #generated-sentence {
+    font-size: 2.5em;
+  }
+  .button {
+    font-size: 2.5em;
+  }
 }
