@@ -109,8 +109,8 @@ const setRandomIndices = () => {
 
 // use interpolation to generate a string from the arrays. Then add the string to the DOM
 const sentenceGenerator = () => {
-  sentence = ` ${structureA[randomIndexA]} ${structureB[randomIndexB]} ${structureC[randomIndexC]} ${structureD[randomIndexD]}`;
-  
+  sentence = `"${structureA[randomIndexA]} ${structureB[randomIndexB]} ${structureC[randomIndexC]} ${structureD[randomIndexD]}"`;
+
   targetParagraph.textContent = sentence;
 };
 
